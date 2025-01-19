@@ -12,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
 
+//    Langkah pertama mendefinisikan variabel terlebih dahulu
     lateinit var linearLayout: LinearLayout
     lateinit var btnoke : Button
     lateinit var greenRB : RadioButton
@@ -28,12 +29,14 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+//        Langkah kedua memanggil variabel tersebut dan tambahkan id yang sudah dibuat di activitu_main.xml
         linearLayout = findViewById(R.id.main)
         btnoke = findViewById(R.id.okBtn)
         greenRB = findViewById(R.id.greenRB)
         yellowRB = findViewById(R.id.yellowRB)
         redRB = findViewById(R.id.redRB)
 
+//        Langkah ketiga menggunakan metode setOnClickListener
         btnoke.setOnClickListener {
             if(greenRB.isChecked) {
                 linearLayout.setBackgroundColor(Color.GREEN)
