@@ -16,14 +16,16 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:title="TopApp Bar"
             app:subtitle="Implementation"
             app:titleTextColor="@color/white"
             app:subtitleTextColor="@color/white"
-            app:navigationIcon="@drawable/icon"
-            app:navigationIconTint="@color/white" >
+            app:navigationIcon="@drawable/baseline_icon_24"
+            app:navigationIconTint="@color/white"
+            app:menu="@menu/toolbar_menu" >
 
         </com.google.android.material.appbar.MaterialToolbar>
 
