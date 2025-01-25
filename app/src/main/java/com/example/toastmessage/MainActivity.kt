@@ -1,5 +1,7 @@
 package com.example.toastmessage
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
@@ -17,6 +19,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var btnSnackBar : Button
     lateinit var myLayout : ConstraintLayout
 
+    lateinit var btnShowMessage : Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -32,6 +36,8 @@ class MainActivity : AppCompatActivity() {
         btnSnackBar = findViewById(R.id.btnSnackBar)
         myLayout = findViewById(R.id.main)
 
+        btnShowMessage = findViewById(R.id.btnShowMessage)
+
         btnToast.setOnClickListener {
             Toast.makeText(applicationContext, "Button Toast is Clicked",Toast.LENGTH_LONG).show()
         }
@@ -39,5 +45,24 @@ class MainActivity : AppCompatActivity() {
         btnSnackBar.setOnClickListener {
             Snackbar.make(myLayout, "SnackBar is CLicked", Toast.LENGTH_LONG).show()
         }
+
+        btnShowMessage.setOnClickListener {
+            showAlertDialog()
+        }
+    }
+
+    fun showAlertDialog() {
+        var alertDialog = AlertDialog.Builder(this@MainActivity)
+
+        alertDialog.setTitle("Change")
+            .setMessage("Do you want to change the text ot the button ?")
+            .setIcon(R.drawable.baseline_warning_24)
+            .setCancelable(false)
+            .setNegativeButton("No", DialogInterface.OnClickListener { dialogInterface: DialogInterface, which ->
+                dialogInterface.cancel()
+            })
+            .setPositiveButton("Yes", DialogInterface.OnClickListener { dialogInterface: DialogInterface, which ->
+                btnShowMessage.text = "Alert Dialog"
+            })
     }
 }
