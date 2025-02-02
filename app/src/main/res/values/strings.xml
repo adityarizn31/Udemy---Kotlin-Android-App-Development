@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">ListView</string>
+    
+    <string-array name="negara">
+        <item>Inggris</item>
+        <item>Indonesia</item>
+        <item>Brazil</item>
+        <item>Sukahaji</item>
+        <item>Majalengka</item>
+        <item>Amerika</item>
+        <item>Thailand</item>
+        <item>Jepang</item>
+        <item>Putat Barat</item>
+        <item>Heleut</item>
+        <item>Panyingkiran</item>
+        <item>Leuwiseeng</item>
+        <item>Munjul</item>
+        <item>Cigasong</item>
+        <item>Anjun</item>
+    </string-array>
+
+</resources>
